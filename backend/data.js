@@ -42,7 +42,7 @@ const data = {
             category: "Dresses",
             image: "/images/p4.JPG",
             price: 80,
-            countInStock: 1,
+            countInStock: 2,
             brand: "Meshki",
             rating: 4.5,
             numReviews: 10,
