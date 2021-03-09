@@ -72,6 +72,30 @@ const data = {
             numReviews: 10,
             description: "high quality product"
         },
+        {
+            _id: "7",
+            name: " Maje Tweed Dress",
+            category: "Dresses",
+            image: "/images/p7.JPG",
+            price: 150,
+            countInStock: 1,
+            brand: "Maje",
+            rating: 4.5,
+            numReviews: 10,
+            description: "high quality product"
+        },
+        {
+            _id: "8",
+            name: "M-Kae Midi Skirt",
+            category: "Skirt",
+            image: "/images/p8.JPG",
+            price: 90,
+            countInStock: 1,
+            brand: "M-Kaet",
+            rating: 4.5,
+            numReviews: 10,
+            description: "high quality product"
+        },
     ],
 };
 export default data;
