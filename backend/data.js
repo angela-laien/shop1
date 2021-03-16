@@ -16,7 +16,6 @@ const data = {
     ],
     products:[
         {
-            _id: "1",
             name: "Storet Leather Dress",
             category: "Dresses",
             image: "/images/p1.JPG",
@@ -28,7 +27,6 @@ const data = {
             description: "high quality product"
         },
         {
-            _id: "2",
             name: "SVDZ Tennis Skirt",
             category: "Skirts",
             image: "/images/p2.JPG",
@@ -40,7 +38,6 @@ const data = {
             description: "high quality product"
         },
         {
-            _id: "3",
             name: "Express Plaid Dress",
             category: "Dresses",
             image: "/images/p3.JPG",
@@ -52,7 +49,6 @@ const data = {
             description: "high quality product"
         },
         {
-            _id: "4",
             name: "Meshki Polo Dress",
             category: "Dresses",
             image: "/images/p4.JPG",
@@ -64,7 +60,6 @@ const data = {
             description: "high quality product"
         },
         {
-            _id: "5",
             name: "Verge Girl Mini Dress",
             category: "Dresses",
             image: "/images/p5.JPG",
@@ -76,7 +71,6 @@ const data = {
             description: "high quality product"
         },
         {
-            _id: "6",
             name: "Self-Portraint Midi Dress",
             category: "Dresses",
             image: "/images/p6.JPG",
@@ -88,7 +82,6 @@ const data = {
             description: "high quality product"
         },
         {
-            _id: "7",
             name: " Maje Tweed Dress",
             category: "Dresses",
             image: "/images/p7.JPG",
@@ -100,7 +93,6 @@ const data = {
             description: "high quality product"
         },
         {
-            _id: "8",
             name: "M-Kae Midi Skirt",
             category: "Skirt",
             image: "/images/p8.JPG",
