@@ -4,10 +4,14 @@ import data from './data.js';
 import userRouter from './routers/userRouter.js';
 
 const app = express();
-mongoose.connect('mongodb://localhost/shopangela', {
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/shopangela', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
+})
+.then(() => console.log('DB Connection Successful'))
+.catch((err) => {
+    console.log(err);
 })
 
 app.get('/api/products/:id', (req, res) => {
