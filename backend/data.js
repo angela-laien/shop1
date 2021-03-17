@@ -5,13 +5,13 @@ const data = {
             name:'Angela',
             email: 'admin@example.com',
             password: bcrypt.hashSync('1234', 8),
-            isAdmin: true,
+            isAdmin: true
         },
         {
             name:'Lily',
             email: 'user@example.com',
             password: bcrypt.hashSync('1234', 8),
-            isAdmin: false,
+            isAdmin: false
         },
     ],
     products:[
