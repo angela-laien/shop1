@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function ShippingAddressScreen(props) {
     const userSignin = useSelector(state => state.userSignin);
     const { userInfo } = userSignin;
-    const cart = useSelector((state) => state.userSignin);
+    const cart = useSelector((state) => state.cart);
     const { shippingAddress } = cart;
     if (!userInfo ) {
         props.history.push('/signin');
