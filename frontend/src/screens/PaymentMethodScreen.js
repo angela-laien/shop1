@@ -7,7 +7,7 @@ export default function PaymentMethodScreen(props) {
     const cart = useSelector((state) => state.cart);
     const { shippingAddress } = cart;
     if (!shippingAddress.address) {
-        props.history.push('shipping');
+        props.history.push('/shipping');
     }
     const [paymentMethod, setPaymentMethod] = useState('PayPal');
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ export default function PaymentMethodScreen(props) {
                         <input
                             type="radio"
                             id="paypal"
-                            value="Paypal"
+                            value="PayPal"
                             name="paymentMethod"
                             required
                             checked
@@ -51,9 +51,10 @@ export default function PaymentMethodScreen(props) {
                     </div>
                 </div>
                 <div>
+                    <label />
                     <button className="primary" type="submit">Continue</button>
                 </div>
             </form>
         </div>
-    )
+    );
 }
