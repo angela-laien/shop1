@@ -71,7 +71,7 @@ const data = {
             description: "high quality product"
         },
         {
-            name: "Self-Portraint Midi Dress",
+            name: "Self-Portrait Midi Dress",
             category: "Dresses",
             image: "/images/p6.JPG",
             price: 350,
