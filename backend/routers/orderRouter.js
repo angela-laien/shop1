@@ -33,7 +33,7 @@ orderRouter.post(
 orderRouter.get(
     '/:id',
     isAuth,
-    expressAsyncHandler(async (req, rec) => {
+    expressAsyncHandler(async (req, res) => {
         const order = await Order.findById(req.params.id);
         if (order) {
             res.send(order);
