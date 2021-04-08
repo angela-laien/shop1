@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { detailsOrder } from '../actions/orderActions';
-import axios from 'axios';
+import Axios from 'axios';
+import { PayPalButton } from 'react-paypal-button-v2';
 
 
 export default function OrderScreen(props) {
@@ -15,7 +16,7 @@ export default function OrderScreen(props) {
     const dispatch = useDispatch();
     useEffect(() => {
         const addPayPalScript = async () => {
-            const { data } = await axios.get('/api/config/paypal');
+            const { data } = await Axios.get('/api/config/paypal');
             const script = document.createElement('script');
             script.type = "text/javascript";
             script.src = `https://www.paypal.com/sdk/js?client-id=${data}`;
@@ -36,7 +37,11 @@ export default function OrderScreen(props) {
                 }
             }
         }
-    }, [dispatch, orderId, orderId, sdkReady]);
+    }, [dispatch, order, orderId, sdkReady]);
+
+    const successPaymentHandler = () => {
+        // TODO: dispatch pay order
+    };
     return loading? (<LoadingBox></LoadingBox>):
     error? (<MessageBox variant="danger">{error}</MessageBox>
     ) : (
@@ -140,9 +145,18 @@ export default function OrderScreen(props) {
                                     </div>
                                 </div>
                             </li>
-                            {
-                                
-                            }
+                            {!order.isPaid && (
+                                <li>
+                                    {!sdkReady ? (
+                                        <LoadingBox></LoadingBox>
+                                    ) : (
+                                        <PayPalButton
+                                            amount ={order.totalPrice}
+                                            onSuccess={successPaymentHandler}
+                                        ></PayPalButton>
+                                    )}
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>
